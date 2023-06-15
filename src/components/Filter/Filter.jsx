@@ -8,8 +8,9 @@ export const Filter = () => {
     const dispatch = useDispatch();
     const filter = useSelector(getContactsFilter);
 
-    const handleChangeFilter = event => {
-        dispatch(setContactsFilter(event.target.value))
+    const handleChangeFilter =({currentTarget:{value}}) => {
+        const dataValue = value.toLowerCase().trim();
+        dispatch(setContactsFilter(dataValue))
     };
 
     return (

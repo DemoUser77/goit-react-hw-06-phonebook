@@ -29,4 +29,4 @@ export const contactsSlice = createSlice({
 
 
 export const contactReducer = contactsSlice.reducer;
-export const { addContacts, deleteContacts } = contactsSlice.actions;
+export const { addContact, deleteContacts } = contactsSlice.actions;
